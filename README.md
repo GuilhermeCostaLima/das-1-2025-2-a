@@ -8,6 +8,6 @@ O que que é abstração
 Código coeso 
 > Ele faz um trabalho, porém faz ele bem feito. Harmonia entre elementos.
 
-**vazada contínua** -> herança <hr>
-**pontilhada** -> implementação <hr>
+**vazada contínua** -> herança <br>
+**pontilhada** -> implementação <br>
 **preenchida contínua** -> associação
