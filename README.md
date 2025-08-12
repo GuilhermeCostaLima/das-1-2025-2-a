@@ -109,3 +109,14 @@ public class Controlador implements ActionListener{
     
 }
 ~~~
+
+# Aula 11/08
+
+O que é o principio da inversão de dependencia?
+>Ambas as classes devem depender de abstrações que definem o comportamento desejado. Com isso pode-se alterar outras classes sem ter alteração nas demais, desde que a interface permaneça a mesma.
+
+### Herança 
+>Que uma classe utilize caracteristicas de uma classe pai.
+
+### Demeter 
+>tenta evitar variáveis globais para que possa ser utilizado variáveis locais. Visando reduzir o acoplamento entre classes e promover o encapsulamento.
