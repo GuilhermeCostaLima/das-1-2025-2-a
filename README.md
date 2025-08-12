@@ -120,3 +120,19 @@ O que é o principio da inversão de dependencia?
 
 ### Demeter 
 >tenta evitar variáveis globais para que possa ser utilizado variáveis locais. Visando reduzir o acoplamento entre classes e promover o encapsulamento.
+
+
+# Aula 12/08
+
+### Liskov
+>Para manter a herança e a compatibilidade com o pai, codificar o código dos filhos desde que não afete o resto. as subclasses devem se comportar de maneira compatível com a superclasse, permitindo que sejam usadas em qualquer contexto onde a superclasse seja esperada. 
+
+
+
+
+
+
+
+
+
+
