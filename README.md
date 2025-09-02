@@ -150,4 +150,66 @@ _um arquiteto deve orientear quais tecnologias utilizar, baseando-se no seu conh
 
 [Introdução a DevOps](https://learn.microsoft.com/pt-br/training/modules/introduction-to-devops/2-what-is-devops?ns-enrollment-type=learningpath&ns-enrollment-id=learn.wwl.az-400-work-git-for-enterprise-devops)
 
+## Aula 02/09
+
+### Diferença entre Arquitetura e Design
+
+#### Arquitetura
+1. Refere-se às decisões mais importantes e de longo prazo sobre o sistema.
+2. São as escolhas que têm maior impacto em qualidade, manutenibilidade, escalabilidade, segurança e desempenho.
+3. Normalmente envolvem restrições que são difíceis ou custosas de mudar depois.
+4. Exemplos:
+    * Escolher se o sistema será monolítico, em microsserviços ou em camadas.
+    * Definir protocolos de comunicação (REST, gRPC, mensageria).
+    * Decidir como dados serão persistidos (SQL, NoSQL, event sourcing).
+  
+#### Design
+1. Refere-se às decisões mais locais, de baixo nível, que podem ser mudadas com mais facilidade.
+2. São importantes, mas geralmente não têm impacto estrutural em todo o sistema.
+3. Envolvem a organização interna de classes, métodos, módulos e padrões de implementação.
+4. Exemplos:
+    * Usar um padrão de projeto (Factory, Strategy, Singleton).
+    * Estruturar os métodos de uma classe.
+    * Nomear variáveis e organizar pacotes.
+### Como é a formação do conhecimento de um arquiteto modelo T?
+
+#### Produndidade (barra vertical T)
+* O arquiteto deve ter profundidade técnica real em uma ou mais áreas específicas.
+
+* Essa profundidade geralmente vem da experiência prática como desenvolvedor, lidando com detalhes de implementação, padrões de projeto, linguagens e frameworks.
+
+* Exemplos: domínio profundo em bancos de dados relacionais, microsserviços, segurança de aplicações, ou computação em nuvem.
+
+* Essa base técnica sólida dá ao arquiteto credibilidade junto aos desenvolvedores e permite avaliar impactos de decisões.
+
+#### Conhecimento Amplo (barra horizontal T)
+
+* Além da profundidade, o arquiteto precisa ter amplitude de conhecimento sobre muitas disciplinas que afetam a arquitetura:
+
+    * Diferentes estilos arquiteturais (monólito, SOA, microsserviços, orientada a eventos etc.).
+    * Processos de desenvolvimento (integração contínua, entrega contínua, testes automatizados).
+    * Práticas de infraestrutura (DevOps, containers, observabilidade, escalabilidade).
+    * Entendimento de domínio de negócio e das necessidades organizacionais.
+    * Habilidades interpessoais: comunicação, negociação, facilitação e liderança técnica.
+
+* Essa amplitude ajuda o arquiteto a transitar entre diferentes áreas e conversar com públicos diversos (devs, gestores, stakeholders de negócio).
+
+#### Síntese do modelo T
+
+* O arquiteto modelo T não é só um especialista profundo nem apenas um generalista superficial.
+
+* Ele combina profundidade em pontos específicos (garantindo que entende os detalhes técnicos) com uma base ampla (que dá visão estratégica e capacidade de integração).
+
+* O livro reforça que esse equilíbrio é essencial, porque arquitetura de software envolve trade-offs: só com profundidade + amplitude o arquiteto consegue tomar decisões conscientes.
+
+
+
+
+
+
+
+
+
+
+
 
