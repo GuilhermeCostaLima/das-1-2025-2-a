@@ -118,6 +118,15 @@ public class Controlador implements ActionListener{
 ### Liskov
 * Para manter a herança e a compatibilidade com o pai, codificar o código dos filhos desde que não afete o resto. as subclasses devem se comportar de maneira compatível com a superclasse, permitindo que sejam usadas em qualquer contexto onde a superclasse seja esperada.
 
+## Aula 25/08
+###Observer
+* É um jeito de um objeto avisar automaticamente outros objetos quando algo muda nele.
+1. O publisher mantém uma lista de observers que se inscrevem.
+2. Quando o estado do publisher muda, ele notifica todos os observers inscritos.
+3. Os observers tem um método que é chamado para reagir à mudança.
+4. Isso permite que vários objetos fiquem sincronizados sem ficarem muito acoplados.
+
+
 ## Aula 26/08
 #### Cararcteristicas de arquiteturas
 * As características de arquitetura são os atributos de qualidade de um sistema, como sua performance, segurança e escalabilidade. Elas definem o "quão bem" o sistema faz o que deve fazer, impactando diretamente a experiência do usuário e a manutenção do software.
