@@ -228,4 +228,52 @@ O arquiteto precisa sempre pesar essas trocas e decidir o que é mais importante
 
 **trade-off é o equilíbrio entre ganhos e perdas ao tomar uma decisão arquitetural.**
 
-# Aula 09/09
+# ------------------------------------------------------------------------------
+
+# Aula 29/09
+
+### Circuit Braker
+
+- Os estados do circuit breaker são:
+1. Fechado: Todas as solicitações são enviadas diretamente para o serviço externo, e o circuit breaker monitora continuamente as solicitações e respostas. 
+2. Aberto: O circuit breaker interrompe a comunicação com o serviço assim que uma falha é detectada. 
+3. Semi-aberto: Permite que algumas solicitações sejam enviadas ao serviço para verificar se ele está funcionando novamente. 
+Esses estados ajudam a gerenciar a comunicação com serviços externos e a evitar falhas em cascata.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
