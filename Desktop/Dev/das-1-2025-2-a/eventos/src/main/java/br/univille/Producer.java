@@ -1,32 +1,33 @@
 package br.univille;
 
 import com.azure.core.amqp.AmqpTransportType;
-import com.azure.identity.DefaultAzureCredential;
-import com.azure.identity.DefaultAzureCredentialBuilder;
 import com.azure.messaging.servicebus.ServiceBusClientBuilder;
-import com.azure.messaging.servicebus.ServiceBusMessage;
 import com.azure.messaging.servicebus.ServiceBusSenderClient;
 
-public class Publisher {
-    public static void main(String[] args) {
+public class Producer {
+    
+    public static void main(String[] args){
         var servidor = "";
-        var topicName = "topic-das1-a";
+
 
         String chave = System.getenv("CHAVE");
+        String queue = "queue-guilhermecosta";
 
         ServiceBusSenderClient senderClient = 
             new ServiceBusClientBuilder()
             .fullyQualifiedNamespace(servidor)
-            .transportType(AmqpTransportType.AMQP_WEB_SOCKETS)
-
             .connectionString(chave)
+            .transportType(AmqpTransportType,AMQP_WEB_SOCKETS)
             .sender()
-            .topicName(topicName)
+            .queueName(queue)
             .buildClient();
+        senderClient.sendMessage(new
+            ServiceBusMessage("1: a"));
+        senderClient.sendMessage(new
+            ServiceBusMessage("2: não sei"));
+        senderClient.sendMessage(new
+            ServiceBusMessage("3: shaolin do sertão"));
 
-        senderClient.sendMessage(
-            new ServiceBusMessage(
-                ""));
 
     }
 }
