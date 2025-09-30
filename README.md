@@ -228,7 +228,7 @@ O arquiteto precisa sempre pesar essas trocas e decidir o que é mais importante
 
 **trade-off é o equilíbrio entre ganhos e perdas ao tomar uma decisão arquitetural.**
 
-# ------------------------------------------------------------------------------
+# ------------------------------------------------------------------
 
 # Aula 29/09
 
