@@ -240,15 +240,79 @@ O arquiteto precisa sempre pesar essas trocas e decidir o que é mais importante
 3. Semi-aberto: Permite que algumas solicitações sejam enviadas ao serviço para verificar se ele está funcionando novamente. 
 Esses estados ajudam a gerenciar a comunicação com serviços externos e a evitar falhas em cascata.
 
+# Aula 30/09
+- Implementação Filas: Producer / Consumer
 
+# Aula 06/10
 
+### Definições das Características Arquiteturais
 
+#### O que são
+- Requisitos além da funcionalidade do domínio.
+- Devem:
+1. Considerar design fora do domínio.
+2. Influenciar a estrutura do sistema.
+3. Ser essenciais ao sucesso.
+- Podem ser explícitas (nos requisitos) ou implícitas (não escritas, mas necessárias).
+  
+#### Categorias principais
+- Operacionais: desempenho, escalabilidade, disponibilidade, confiabilidade, recuperabilidade, robustez.
+- Estruturais: modularidade, reutilização, manutenção, portabilidade, atualização.
+- Transversais: segurança (autenticação, autorização, privacidade), acessibilidade, usabilidade, requisitos legais.
+  
+#### Aspectos chave
+- Não existe lista universal (cada empresa define as suas).
+- Muitas características se sobrepõem (ex.: confiabilidade x disponibilidade).
+- ISO traz categorias como: desempenho, compatibilidade, usabilidade, confiabilidade, segurança, manutenibilidade, portabilidade.
 
+#### Trade-offs
+- Melhorar uma característica pode prejudicar outra (ex.: segurança vs. desempenho).
+- Arquitetura deve equilibrar prioridades.
 
+#### Lições principais
+- Escolher poucas características essenciais.
+- Projetar arquitetura iterativa e adaptável.
+- Buscar a “menos pior”, não a perfeita.
 
+# Aula 07/10
+### CQRS
 
+#### O que é
+- Padrão de arquitetura que separa escrita (commands) de leitura (queries) com modelos de dados distintos.
 
+#### Problemas que resolve
 
+- Dificuldade em otimizar leitura e escrita no mesmo modelo.
+- Contenção de bloqueios em banco de dados.
+- Consultas complexas e lentas.
+- Mistura de regras de segurança para leitura e escrita.
+
+#### Como funciona
+
+- Commands: alteram o estado do sistema (operações de escrita).
+- Queries: retornam dados sem modificar o estado (operações de leitura).
+- Modelos de leitura e escrita podem estar no mesmo ou em bancos diferentes.
+
+#### Benefícios
+
+- Escalabilidade separada para leitura e escrita.
+- Modelos de dados otimizados para cada propósito.
+- Melhor controle de segurança.
+- Código mais organizado e responsabilidades bem definidas.
+
+#### Desvantagens
+
+- Maior complexidade de implementação.
+- Consistência eventual (leituras podem estar desatualizadas).
+- Necessidade de sincronizar os modelos de leitura e escrita.
+- Sobrecarga ao manter visões ou materializações.
+
+#### Quando usar
+
+- Sistemas com muitas leituras e escritas concorrentes.
+- Aplicações baseadas em tarefas ou processos.
+- Necessidade de otimização distinta para leitura e escrita.
+- Projetos em evolução ou que precisam integrar subsistemas diferentes.
 
 
 
