@@ -1,4 +1,22 @@
 # das-1-2025-2-a
+* [Aula 04/08](#aula-0408)
+* [Aula 05/08](#aula-0508)
+* [Aula 11/08](#aula-1108)
+* [Aula 12/08](#aula-1208)
+* [Aula 25/08](#aula-2508)
+* [Aula 26/08](#aula-2608)
+* [Aula 01/09](#aula-0109)
+* [Aula 02/09](#aula-0209)
+* [Aula 08/09](#aula-0809)
+* [Aula 29/09](#aula-2909)
+* [Aula 30/08](#aula-3009)
+* [Aula 06/10](#aula-0610)
+* [Aula 07/10](#aula-0710)
+* [Aula 13/10](#aula-1310)
+* [Aula 14/10](#aula-1410)
+
+
+
 
 ## Aula 04/08
 O que que é abstração
@@ -314,12 +332,46 @@ Esses estados ajudam a gerenciar a comunicação com serviços externos e a evit
 - Necessidade de otimização distinta para leitura e escrita.
 - Projetos em evolução ou que precisam integrar subsistemas diferentes.
 
+# Aula 13/10
 
+#### Retry Pattern
 
+- O Retry Pattern, segundo a Microsoft, é um padrão de resiliência usado para lidar com falhas temporárias em sistemas distribuídos. Ele faz com que uma operação que falhou seja tentada novamente após um intervalo de tempo, em vez de falhar de imediato.
+- Normalmente usa estratégias como exponential backoff (aumentar o tempo entre tentativas) e limite máximo de tentativas. É útil para falhas transitórias de rede, APIs ou bancos de dados, e pode ser implementado com ferramentas como Polly no .NET.
 
+#### Fundamentos dos padrões culturais (Fundamentos)
 
+- Os padrões fundamentais de arquitetura ajudam a organizar o código e definir a estrutura dos sistemas. Um exemplo clássico é o padrão em camadas, que separa responsabilidades conforme a funcionalidade.
 
+- O antipadrão Grande Bola de Lama representa sistemas sem estrutura, com código confuso e difícil de manter, geralmente causados por falta de governança técnica.
 
+- A arquitetura unitária foi o modelo inicial dos sistemas, evoluindo para cliente/servidor e três camadas, que separam a aplicação entre interface, lógica de negócio e banco de dados, melhorando a escalabilidade e manutenção.
+
+- Esses padrões influenciaram até o design de linguagens como o Java e mostram que decisões arquiteturais impactam o longo prazo, reforçando a importância de manter simplicidade e boa estrutura no projeto.
+
+# Aula 14/10
+
+As arquiteturas monolíticas concentram todo o código em uma única unidade, enquanto as arquiteturas distribuídas dividem o sistema em várias partes que se comunicam por rede. Embora as distribuídas ofereçam maior desempenho, escalabilidade e disponibilidade, trazem novos desafios e trade-offs.
+
+Esses desafios são resumidos nas oito falácias da computação distribuída, que incluem suposições incorretas como:
+
+1. A rede é confiável — falhas de conexão sempre podem ocorrer.
+
+2. A latência é zero — a comunicação remota é muito mais lenta que a local.
+
+3. A largura de banda é infinita — transferências excessivas entre serviços afetam o desempenho.
+
+4. A rede é segura — cada endpoint precisa ser protegido.
+
+5. A topologia nunca muda — alterações na rede afetam o sistema.
+
+6. Existe apenas um administrador — há muitos responsáveis pela infraestrutura.
+
+7. O custo do transporte é zero — chamadas remotas exigem mais recursos e dinheiro.
+
+8. A rede é homogênea — diferentes equipamentos e provedores nem sempre funcionam bem juntos.
+
+Além disso, sistemas distribuídos enfrentam dificuldades com logs e transações, exigindo ferramentas específicas para consolidação de logs e uso de transações distribuídas com consistência eventual (como o padrão BASE e sagas transacionais).
 
 
 
