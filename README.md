@@ -14,6 +14,8 @@
 * [Aula 07/10](#aula-0710)
 * [Aula 13/10](#aula-1310)
 * [Aula 14/10](#aula-1410)
+* [Aula 20/10](#aula-2010)
+* [Aula 21/10](#aula-2110)
 
 
 
@@ -373,22 +375,35 @@ Esses desafios são resumidos nas oito falácias da computação distribuída, q
 
 Além disso, sistemas distribuídos enfrentam dificuldades com logs e transações, exigindo ferramentas específicas para consolidação de logs e uso de transações distribuídas com consistência eventual (como o padrão BASE e sagas transacionais).
 
+# Aula 20/10 e 21/10
 
+#### Arquitetura em Camadas
+A arquitetura em camadas (ou n-tier) é um dos estilos mais populares, principalmente pela sua simplicidade e boa organização. Ela consiste em dividir o sistema em diferentes camadas, cada uma com uma função específica e bem definida.
 
+#### Estrutura Geral
+As camadas são dispostas horizontalmente, seguindo uma hierarquia funcional, geralmente assim:
+* __Camada de Apresentação__ → Responsável pela interface com o usuário
+* __Camada de Negócios__ → Onde ficam as regras e lógicas da aplicação
+* __Camada de Persistência__ → Gerencia o acesso e manipulação dos dados
+* __Banco de Dados__ → Responsável pelo armazenamento das informações
+Cada camada se comunica apenas com a camada imediatamente abaixo, promovendo uma estrutura modular e mais fácil de manter.
 
+#### Camadas Abertas vs. Fechadas
+* __Camadas Fechadas:__ o fluxo deve respeitar a ordem entre camadas, sem pular etapas.
+* __Camadas Abertas:__ permitem acesso direto entre camadas, o que traz mais flexibilidade, mas também pode aumentar o acoplamento.
 
+#### Principais Vantagens
+* Fácil de entender e implementar
+* Custo de desenvolvimento mais baixo
+* Facilita a manutenção e a divisão clara de responsabilidades
 
+#### Possíveis Desvantagens
+* Pode ser difícil de escalar ou testar em sistemas muito grandes
+* Menor agilidade para mudanças rápidas
+* Risco de acoplamento excessivo se mal projetada
 
-
-
-
-
-
-
-
-
-
-
+#### Quando é uma Boa Escolha?
+É uma ótima opção para sistemas pequenos ou médios, ou ainda como estrutura inicial quando a arquitetura do projeto ainda não está totalmente definida.
 
 
 
