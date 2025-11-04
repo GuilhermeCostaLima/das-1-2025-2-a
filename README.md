@@ -14,9 +14,9 @@
 * [Aula 07/10](#aula-0710)
 * [Aula 13/10](#aula-1310)
 * [Aula 14/10](#aula-1410)
-* [Aula 20/10](#aula-2010)
 * [Aula 20/10 e 21/10](#aula-2010-e-2110)
-
+* [Aula 27/10 e 28/10](#aula-2710-e-2810)
+* [Aula 03/11 e 04/11](#aula-0311-e-0411)
 
 
 
@@ -405,6 +405,62 @@ Cada camada se comunica apenas com a camada imediatamente abaixo, promovendo uma
 #### Quando é uma Boa Escolha?
 É uma ótima opção para sistemas pequenos ou médios, ou ainda como estrutura inicial quando a arquitetura do projeto ainda não está totalmente definida.
 
+# Aula 27/10 e 28/10
 
+#### Estilo de Arquitetura: Pipeline (Pipe and Filter)
+
+O **estilo de arquitetura Pipeline** — também conhecido como **Pipe and Filter** — organiza o sistema como uma sequência de **filtros** (componentes independentes) conectados por **pipes** (canais).  
+Cada filtro transforma os dados que recebe e envia o resultado para o próximo filtro no fluxo.
+
+#### Estrutura
+
+- **Filtros:** realizam transformações nos dados (ex: análise, cálculo, formatação).  
+- **Pipes:** canais responsáveis por transportar a saída de um filtro para o próximo.
+
+#### Funcionamento
+
+1. O primeiro filtro recebe os dados de entrada.  
+2. Cada filtro processa a informação e envia o resultado para o próximo.  
+3. O último filtro produz a saída final do sistema.  
+
+Exemplo:
+
+Entrada → [Filtro 1] → [Filtro 2] → [Filtro 3] → Saída
+
+#### Exemplo de Uso
+
+Um **compilador** pode ser estruturado como um pipeline:
+
+Código-fonte → Analisador Léxico → Analisador Sintático → Otimizador → Gerador de Código → Executável
+
+#### Vantagens
+
+- Alta **modularidade** e **reutilização** dos filtros.  
+- **Fácil manutenção** (cada filtro é independente).  
+- Possibilidade de **execução paralela** e **processamento contínuo (streaming)**.
+
+#### Desvantagens
+
+- Pode haver **sobrecarga** na comunicação entre filtros.  
+- Requer **formato de dados compatível** entre as etapas.  
+- **Difícil de aplicar** em sistemas com dependências complexas entre componentes.
+
+#### Aplicações Comuns
+
+- Compiladores  
+- Sistemas **ETL** (Extração, Transformação e Carga)  
+- Processamento de **imagens**, **áudio** e **vídeo**  
+- **Pipelines** de CI/CD e Machine Learning
+
+#### Diagrama (Mermaid)
+
+```mermaid
+flowchart LR
+    A[Entrada] --> B[Filtro 1]
+    B --> C[Filtro 2]
+    C --> D[Filtro 3]
+    D --> E[Saída]
+```
+#
 
 
