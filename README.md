@@ -33,6 +33,8 @@ pontilhada -> implementação
 <br>
 preenchida contínua -> associação
 
+---
+
 ## Aula 05/08
 ### SOLID
 Usar a orientação de objetos de maneira correta
@@ -124,6 +126,8 @@ public class Controlador implements ActionListener{
 }
 ~~~
 
+---
+
 ## Aula 11/08
 ### O que é o principio da inversão de dependencia?
 * Ambas as classes devem depender de abstrações que definem o comportamento desejado. Com isso pode-se alterar outras classes sem ter alteração nas demais, desde que a interface permaneça a mesma.
@@ -134,9 +138,13 @@ public class Controlador implements ActionListener{
 ### Demeter
 * Tenta evitar variáveis globais para que possa ser utilizado variáveis locais. Visando reduzir o acoplamento entre classes e promover o encapsulamento.
 
+---
+
 ## Aula 12/08
 ### Liskov
 * Para manter a herança e a compatibilidade com o pai, codificar o código dos filhos desde que não afete o resto. as subclasses devem se comportar de maneira compatível com a superclasse, permitindo que sejam usadas em qualquer contexto onde a superclasse seja esperada.
+  
+---
 
 ## Aula 25/08
 ### Observer
@@ -146,6 +154,7 @@ public class Controlador implements ActionListener{
 3. Os observers tem um método que é chamado para reagir à mudança.
 4. Isso permite que vários objetos fiquem sincronizados sem ficarem muito acoplados.
 
+---
 
 ## Aula 26/08
 #### Cararcteristicas de arquiteturas
@@ -156,6 +165,8 @@ public class Controlador implements ActionListener{
 
 #### Princípios do design
 * Os princípios de design são diretrizes que ajudam a equipe a escrever um código de melhor qualidade, mais limpo e fácil de manter. Eles se aplicam a um nível mais detalhado e guiam a criação de componentes, como as classes. Um exemplo famoso é o SOLID, um conjunto de cinco princípios que promovem um código mais flexível e sustentável.
+
+---
 
 ## Aula 01/09
 #### Caracteristicas de arquitetura
@@ -178,6 +189,8 @@ _um arquiteto deve orientear quais tecnologias utilizar, baseando-se no seu conh
 >Maneira de entregar valor ao meu cliente mais rápido.
 
 [Introdução a DevOps](https://learn.microsoft.com/pt-br/training/modules/introduction-to-devops/2-what-is-devops?ns-enrollment-type=learningpath&ns-enrollment-id=learn.wwl.az-400-work-git-for-enterprise-devops)
+
+---
 
 ## Aula 02/09
 
@@ -231,6 +244,8 @@ _um arquiteto deve orientear quais tecnologias utilizar, baseando-se no seu conh
 
 * O livro reforça que esse equilíbrio é essencial, porque arquitetura de software envolve trade-offs: só com profundidade + amplitude o arquiteto consegue tomar decisões conscientes.
 
+--
+
 # Aula 08/09
 
 * Um tópico atua como um intermediário de comunicação assíncrona entre quem produz e quem consome eventos. Quem dá o lance envia a informação para o tópico, que funciona como um canal centralizado. Esse tópico então distribui o mesmo evento para diferentes consumidores, como os serviços de capturar, rastrear e analisar lance. Dessa forma, o produtor não precisa conhecer diretamente os consumidores, e cada consumidor pode processar o evento de forma independente. Isso garante desacoplamento, flexibilidade e a possibilidade de vários serviços reagirem ao mesmo evento ao mesmo tempo.
@@ -248,7 +263,7 @@ O arquiteto precisa sempre pesar essas trocas e decidir o que é mais importante
 
 **trade-off é o equilíbrio entre ganhos e perdas ao tomar uma decisão arquitetural.**
 
-# ----------------------------------------------------------------
+---
 
 # Aula 29/09
 
@@ -260,8 +275,12 @@ O arquiteto precisa sempre pesar essas trocas e decidir o que é mais importante
 3. Semi-aberto: Permite que algumas solicitações sejam enviadas ao serviço para verificar se ele está funcionando novamente. 
 Esses estados ajudam a gerenciar a comunicação com serviços externos e a evitar falhas em cascata.
 
+---
+
 # Aula 30/09
 - Implementação Filas: Producer / Consumer
+
+---
 
 # Aula 06/10
 
@@ -293,6 +312,8 @@ Esses estados ajudam a gerenciar a comunicação com serviços externos e a evit
 - Escolher poucas características essenciais.
 - Projetar arquitetura iterativa e adaptável.
 - Buscar a “menos pior”, não a perfeita.
+
+---
 
 # Aula 07/10
 ### CQRS
@@ -334,6 +355,8 @@ Esses estados ajudam a gerenciar a comunicação com serviços externos e a evit
 - Necessidade de otimização distinta para leitura e escrita.
 - Projetos em evolução ou que precisam integrar subsistemas diferentes.
 
+---
+
 # Aula 13/10
 
 #### Retry Pattern
@@ -350,6 +373,8 @@ Esses estados ajudam a gerenciar a comunicação com serviços externos e a evit
 - A arquitetura unitária foi o modelo inicial dos sistemas, evoluindo para cliente/servidor e três camadas, que separam a aplicação entre interface, lógica de negócio e banco de dados, melhorando a escalabilidade e manutenção.
 
 - Esses padrões influenciaram até o design de linguagens como o Java e mostram que decisões arquiteturais impactam o longo prazo, reforçando a importância de manter simplicidade e boa estrutura no projeto.
+
+---
 
 # Aula 14/10
 
@@ -374,6 +399,8 @@ Esses desafios são resumidos nas oito falácias da computação distribuída, q
 8. A rede é homogênea — diferentes equipamentos e provedores nem sempre funcionam bem juntos.
 
 Além disso, sistemas distribuídos enfrentam dificuldades com logs e transações, exigindo ferramentas específicas para consolidação de logs e uso de transações distribuídas com consistência eventual (como o padrão BASE e sagas transacionais).
+
+---
 
 # Aula 20/10 e 21/10
 
@@ -404,6 +431,8 @@ Cada camada se comunica apenas com a camada imediatamente abaixo, promovendo uma
 
 #### Quando é uma Boa Escolha?
 É uma ótima opção para sistemas pequenos ou médios, ou ainda como estrutura inicial quando a arquitetura do projeto ainda não está totalmente definida.
+
+---
 
 # Aula 27/10 e 28/10
 
@@ -461,6 +490,68 @@ flowchart LR
     C --> D[Filtro 3]
     D --> E[Saída]
 ```
-#
+---
 
+# Aula 03/11 e 04/11
+
+#### Estilo de Arquitetura: Microkernel
+
+O **estilo de arquitetura Microkernel** (ou **Núcleo Modular**) é um modelo em que o sistema é dividido em um **núcleo central mínimo** (microkernel) e um conjunto de **módulos plugáveis** que adicionam funcionalidades específicas.  
+Essa abordagem é muito usada em **sistemas operacionais**, **ferramentas de servidor** e **aplicações extensíveis**.
+
+#### Estrutura
+
+- **Microkernel (Núcleo Central):** fornece os serviços básicos do sistema, como comunicação, gerenciamento de processos e recursos.  
+- **Serviços Internos (Core Services):** executam funções essenciais diretamente ligadas ao núcleo.  
+- **Serviços Externos ou Plug-ins:** módulos adicionais que estendem o sistema sem alterar o núcleo, podendo ser carregados ou descarregados dinamicamente.
+
+#### Funcionamento
+
+1. O **microkernel** gerencia a comunicação entre módulos e os recursos do sistema.  
+2. Os **módulos (plug-ins)** registram-se no núcleo e interagem entre si por meio de mensagens.  
+3. O sistema pode ser **expandido** adicionando novos módulos sem modificar o núcleo principal.
+
+Exemplo de fluxo:
+[Usuário] → [Módulo A] ↔ [Microkernel] ↔ [Módulo B] → [Serviço]
+
+#### Exemplo de Uso
+
+Um **sistema operacional moderno**, como o **MacOS** ou o **Windows NT**, utiliza uma arquitetura microkernel, onde:
+- O **núcleo** controla processos, memória e comunicação.  
+- Os **drivers**, **sistemas de arquivos** e **serviços de rede** funcionam como módulos separados.  
+
+Outro exemplo comum são **IDE’s** (como Eclipse ou VS Code), que possuem um núcleo leve e permitem adicionar **extensões**.
+
+#### Vantagens
+
+- Alta **modularidade** e **flexibilidade**.  
+- **Facilidade de manutenção** e atualização de módulos.  
+- **Isolamento de falhas** — se um módulo falhar, o núcleo continua em execução.  
+- **Escalabilidade** — novos recursos podem ser adicionados sem interromper o sistema.
+
+#### Desvantagens
+
+- **Complexidade** na comunicação entre o núcleo e os módulos.  
+- Pode ocorrer **sobrecarga de desempenho** devido à troca de mensagens.  
+- **Desenvolvimento inicial mais difícil**, pois o núcleo precisa ser altamente confiável e estável.
+
+#### Aplicações Comuns
+
+- **Sistemas operacionais** (ex: Minix, QNX, MacOS, Windows NT)  
+- **Servidores modulares** e **middleware**  
+- **Ambientes de desenvolvimento** (ex: Eclipse, VS Code)  
+- **Softwares extensíveis e personalizáveis**
+
+#### Diagrama (Mermaid)
+
+```mermaid
+flowchart TB
+    A[Microkernel] --> B[Módulo 1]
+    A --> C[Módulo 2]
+    A --> D[Módulo 3]
+    B <--> A
+    C <--> A
+    D <--> A
+```
+---
 
