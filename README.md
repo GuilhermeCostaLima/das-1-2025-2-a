@@ -244,7 +244,7 @@ _um arquiteto deve orientear quais tecnologias utilizar, baseando-se no seu conh
 
 * O livro reforça que esse equilíbrio é essencial, porque arquitetura de software envolve trade-offs: só com profundidade + amplitude o arquiteto consegue tomar decisões conscientes.
 
---
+---
 
 # Aula 08/09
 
