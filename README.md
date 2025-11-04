@@ -404,7 +404,3 @@ Cada camada se comunica apenas com a camada imediatamente abaixo, promovendo uma
 
 #### Quando é uma Boa Escolha?
 É uma ótima opção para sistemas pequenos ou médios, ou ainda como estrutura inicial quando a arquitetura do projeto ainda não está totalmente definida.
-
-
-
-
