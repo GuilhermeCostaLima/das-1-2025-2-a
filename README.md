@@ -17,6 +17,7 @@
 * [Aula 20/10 e 21/10](#aula-2010-e-2110)
 * [Aula 27/10 e 28/10](#aula-2710-e-2810)
 * [Aula 03/11 e 04/11](#aula-0311-e-0411)
+* [Aula 10/11 e 11/11](#aula-1011-e-1111)
 
 
 
@@ -571,7 +572,7 @@ Inspirada nos princípios do **Domain-Driven Design (DDD)**, ela se baseia forte
 
 ### Conceitos Fundamentais
 
-### 🧩 Desacoplamento e Contexto Delimitado
+### Desacoplamento e Contexto Delimitado
 Cada serviço modela um domínio de negócio de forma **independente**, com seu próprio código e banco de dados.  
 > Preferimos **duplicar** código a criar **acoplamento** entre serviços.
 
@@ -605,4 +606,5 @@ sequenceDiagram
   alt Erro
     Mediator->>A: Compensar operação
   end
+```
 ---
