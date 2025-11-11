@@ -590,9 +590,7 @@ A granularidade correta é a que **representa bem o domínio** e **evita depend�
   - **Assíncrona** → eventos, filas e mensageria  
 - **Coreografia** é preferida à **orquestração**, pois mantém a independência entre serviços.
 
----
-
-## 🔁 Transações e Sagas
+### Transações e Sagas
 
 Transações distribuídas são **evitadas** para preservar o desacoplamento.  
 Quando necessárias, usa-se o **padrão Saga**, que coordena ações e desfaz (compensa) operações em caso de erro.
