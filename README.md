@@ -556,3 +556,55 @@ flowchart TB
     D <--> A
 ```
 ---
+
+# Aula 10/11 e 11/11
+
+### Arquitetura de Microsserviços
+
+A **arquitetura de microsserviços** é um estilo de arquitetura **distribuído, desacoplado e centrado no domínio**, em que cada serviço é pequeno, independente e responsável por uma funcionalidade específica do sistema.  
+Esse modelo permite **alta escalabilidade, resiliência e evolução contínua** das aplicações modernas.
+
+### História
+
+Popularizada por **Martin Fowler** e **James Lewis (2014)**, a arquitetura de microsserviços surgiu como resposta às limitações das arquiteturas **monolíticas** e **SOA (Service-Oriented Architecture)**.  
+Inspirada nos princípios do **Domain-Driven Design (DDD)**, ela se baseia fortemente no conceito de **Contexto Delimitado** (*Bounded Context*).
+
+### Conceitos Fundamentais
+
+### 🧩 Desacoplamento e Contexto Delimitado
+Cada serviço modela um domínio de negócio de forma **independente**, com seu próprio código e banco de dados.  
+> Preferimos **duplicar** código a criar **acoplamento** entre serviços.
+
+### Isolamento de Dados
+Cada microsserviço possui seu **próprio repositório de dados**, evitando esquemas e integrações compartilhadas.
+
+### Granularidade
+Os serviços devem ter **tamanho funcional**, não necessariamente “micro”.  
+A granularidade correta é a que **representa bem o domínio** e **evita dependências desnecessárias**.
+
+### Topologia e Comunicação
+
+- Arquitetura **distribuída**: cada serviço roda em seu próprio processo ou contêiner.  
+- Comunicação:
+  - **Síncrona** → REST, gRPC  
+  - **Assíncrona** → eventos, filas e mensageria  
+- **Coreografia** é preferida à **orquestração**, pois mantém a independência entre serviços.
+
+---
+
+## 🔁 Transações e Sagas
+
+Transações distribuídas são **evitadas** para preservar o desacoplamento.  
+Quando necessárias, usa-se o **padrão Saga**, que coordena ações e desfaz (compensa) operações em caso de erro.
+
+```mermaid
+sequenceDiagram
+  participant A as Serviço A
+  participant B as Serviço B
+  participant Mediator as Saga
+  A->>Mediator: Inicia transação
+  Mediator->>B: Executa operação
+  alt Erro
+    Mediator->>A: Compensar operação
+  end
+---
